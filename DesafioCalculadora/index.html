@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <h1>js - O único Java que presta - js</h1>
+      </nav>
+    </header>
+    <main>
+      <section id="calc-section">
+        <div class="calc-card">
+          <div>
+            <div class="form-control">
+              <label for="inputNumber1">1º número:</label>
+              <input
+                name="inputNumber1"
+                id="inputNumber1"
+                class="form-input"
+                type="text"
+              />
+            </div>
+            <div class="form-control">
+              <label for="inputNumber2">2º número:</label>
+              <input
+                name="inputNumber2"
+                id="inputNumber2"
+                class="form-input"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="result-container">
+            <div id="result-box">
+              0
+            </div>
+          </div>
+          <div class="buttons-container">
+            <div id="btn-plus" class="btn">+</div>
+            <div id="btn-minus" class="btn">-</div>
+            <div id="btn-times" class="btn">x</div>
+            <div id="btn-clear" class="btn">C</div>
+          </div>
+        </div>
+      </section>      
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
