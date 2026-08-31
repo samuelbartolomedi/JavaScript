@@ -1,5 +1,6 @@
 import Address from "../models/address.js";
 import * as addressService from "../services/address-service.js";
+import * as listController from "./list-controller.js";
 
 function State() {
     this.address = new Address();
@@ -55,9 +56,7 @@ function handlerBtnClearClick(event) {
 async function handlerBtnSaveClick(event) {
     event.preventDefault();
 
-    console.log("clicou no botão salvar amigo");
-
-    console.log(state.address);
+    listController.addCard(state.address);
 }
 
 function clearForm() {
