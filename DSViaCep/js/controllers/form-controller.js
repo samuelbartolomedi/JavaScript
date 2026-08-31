@@ -97,7 +97,10 @@ async function handlerInputCepChange(event) {
 
         state.inputStreet.value = address.street;
         state.inputCity.value = address.city;
-        state.address = address;
+
+        state.address.postalCode = address.postalCode;
+        state.address.street = address.street;
+        state.address.city = address.city;
 
         setFormError("postalCode", "");
 
