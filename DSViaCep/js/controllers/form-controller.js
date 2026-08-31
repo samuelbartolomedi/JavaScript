@@ -53,10 +53,21 @@ function handlerBtnClearClick(event) {
     clearForm();
 }
 
-async function handlerBtnSaveClick(event) {
+function handlerBtnSaveClick(event) {
     event.preventDefault();
 
+    const errors = addressService.validateData(state.address);
+    if (Object.keys(errors).length > 0) {
+        for (const [key, value] of Object.entries(errors)) {
+            setFormError(key, value);
+        }
+        
+        return;
+    }
+
     listController.addCard(state.address);
+
+    clearForm();
 }
 
 function clearForm() {
@@ -67,6 +78,8 @@ function clearForm() {
 
     setFormError("postalCode", "");
     setFormError("number", "");
+
+    state.address = new Address();
 
     state.inputPostalCode.focus();
 }

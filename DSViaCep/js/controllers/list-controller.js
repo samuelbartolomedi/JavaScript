@@ -9,8 +9,6 @@ export function init() {
 }
 
 export function addCard(address) {
-    if (!state.listSection) return;
-
     const card = createCard(address);
     state.listSection.appendChild(card);
 }
