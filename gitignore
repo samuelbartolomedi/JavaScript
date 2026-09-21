@@ -1,0 +1,15 @@
+# === Sistema operacional ===
+.DS_Store
+Thumbs.db
+
+# === Editor / IDE ===
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.sw?
+
+# === Caso venha a usar Node no futuro ===
+node_modules/
+npm-debug.log*
